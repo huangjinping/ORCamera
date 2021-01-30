@@ -9,10 +9,11 @@ import android.content.pm.PackageManager;
 import android.graphics.Rect;
 import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
-import android.support.v4.app.ActivityCompat;
 import android.view.TextureView;
 import android.view.View;
 import android.widget.FrameLayout;
+
+import androidx.core.app.ActivityCompat;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -220,6 +221,7 @@ public class Camera1Control implements ICameraControl {
         @Override
         public void onSurfaceTextureUpdated(SurfaceTexture surface) {
         }
+
     };
 
     // 开启预览

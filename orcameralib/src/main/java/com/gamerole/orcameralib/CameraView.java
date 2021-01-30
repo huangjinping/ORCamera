@@ -12,12 +12,13 @@ import android.graphics.Rect;
 import android.os.Build;
 import android.os.Handler;
 import android.os.HandlerThread;
-import android.support.annotation.IntDef;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
+import androidx.annotation.IntDef;
 
 import com.gamerole.orcameralib.util.DimensionUtil;
 import com.gamerole.orcameralib.util.ImageUtil;
@@ -177,7 +178,6 @@ public class CameraView extends FrameLayout {
      * @param outputFile 写入照片的文件。
      * @param imageFile  原始照片。
      * @param rotation   照片exif中的旋转角度。
-     *
      * @return 裁剪好的bitmap。
      */
     @SuppressWarnings("ResultOfMethodCallIgnored")
@@ -327,6 +327,8 @@ public class CameraView extends FrameLayout {
                         fileOutputStream.write(data);
                         fileOutputStream.flush();
                         fileOutputStream.close();
+
+                        Log.d("okhttp", "======tempFile======" + tempFile.getAbsolutePath());
                         handler.post(new Runnable() {
                             @Override
                             public void run() {

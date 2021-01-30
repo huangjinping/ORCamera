@@ -2,7 +2,7 @@ package com.gamerole.orcamera
 
 import android.Manifest
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.gamerole.orcameralib.CameraActivity
 import com.tbruyelle.rxpermissions2.RxPermissions
 import kotlinx.android.synthetic.main.activity_main.*
